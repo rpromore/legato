@@ -158,9 +158,9 @@
       			<div class="subnav">
 			    	<ul class="nav nav-pills pull-left">
 			    		<div class="btn-group pull-left" data-toggle="buttons-radio">
-							<button class="btn btn-large"><i class="icon-backward"></i></button>
-							<button class="btn btn-large"><i class="icon-play"></i></button>
-							<button class="btn btn-large"><i class="icon-forward"></i></button>
+							<button class="btn"><i class="icon-backward"></i></button>
+							<button class="btn" rel="tooltip" title="Play"><i class="icon-play"></i></button>
+							<button class="btn"><i class="icon-forward"></i></button>
 						</div>
 				    	<div id="nav-time" class="pull-left">
 				    		<div id="time-current">0:00</div>
@@ -170,9 +170,17 @@
 							<div id="time-total">0:00</div>
 						</div>
 			    		<div class="btn-group pull-left" data-toggle="buttons-checkbox">
-							<button class="btn btn-large"><i class="icon-random"></i></button>
-							<button class="btn btn-large"><i class="icon-repeat"></i></button>
+							<button class="btn"><i class="icon-random"></i></button>
+							<button class="btn"><i class="icon-repeat"></i></button>
 						</div>
+			    	</ul>
+			    	<ul id="volume" class="pull-right">
+			    		<div class="btn-group pull-left" data-toggle="buttons-checkbox">
+			    			<button class="btn"><i class="icon-volume-up"></i></button>
+			    		</div>
+						<div class="progress">
+				    		 <div class="bar" style="width: 50%;">test</div>
+				    	</div>
 			    	</ul>
 			    </div>
 				<div class="well sidebar-nav">
