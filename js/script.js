@@ -18,10 +18,13 @@ $(document).scroll(function(){
         $('.subnav').removeClass('subnav-fixed');
 });
 
-var scripts = [	"app/ump.js", 
+var scripts = 
+            [	"app/ump.js", 
 				"app/ump.favorites.js", 
 				"app/ump.services.reddit.js", 
-				"app/ump.handlers.youtube.js"
+				"app/ump.handlers.youtube.js",
+				"app/app.js",
+                "app/ui.js"
 			];
 for( var s in scripts ) {
 	$.getScript("js/"+scripts[s]);

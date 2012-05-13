@@ -28,164 +28,94 @@
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
     <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Legato</a>
-          <div class="nav-collapse">
-            <ul class="nav pull-left">
-              	<li class="active"><a href="#">Home</a></li>
-              	<li><a href="#favorites">Favorites</a></li>
-              	<li><a href="#playlists">Playlists</a></li>
-              	<li class="dropdown" id="settings">
-              		<a class="dropdown-toggle" data-toggle="dropdown" href="#settings">
-              			Settings
-              			<b class="caret"></b>
-              		</a>
-              		<ul class="dropdown-menu">
-				    	<li><a href="#">Action</a></li>
-				    	<li><a href="#">Another action</a></li>
-				    	<li><a href="#">Something else here</a></li>
-				    	<li class="divider"></li>
-				    	<li><a href="#">Separated link</a></li>
-				    </ul>
-              	</li>
-
-            </ul>
-            <ul class="nav pull-right">
-            	<li><a href="#search">Search</a></li>
-              	<li>
-              		<form class="navbar-search pull-left">
-						<input type="text" class="span2 search-query">
-					</form>
-				</li>
-			</ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
+      	<div class="navbar-inner">
+       		<div class="container">
+          		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+          		</a>
+          		<a class="brand" href="#">Legato</a>
+      			<div class="nav-collapse">
+        			<ul class="nav pull-left">
+          				<li class="active"><a href="#">Home</a></li>
+          				<li><a href="#favorites">Favorites</a></li>
+          				<li><a href="#playlists">Playlists</a></li>
+          				<li class="divivider-vertical"></li>
+          				<li class="dropdown" id="settings">
+          					<a class="dropdown-toggle" data-toggle="dropdown" href="#settings">
+          						Settings
+          						<b class="caret"></b>
+          					</a>
+          					<ul class="dropdown-menu">
+			    				<li><a href="#">Action</a></li>
+			    				<li><a href="#">Another action</a></li>
+			    				<li><a href="#">Something else here</a></li>
+			    				<li class="divider"></li>
+			    				<li><a href="#">Separated link</a></li>
+			    			</ul>
+          				</li>
+		            </ul>
+        			<ul class="nav pull-right">
+        				<li><a href="#search">Search</a></li>
+          				<li>
+          					<form class="navbar-search pull-left">
+								<input type="text" class="span2 search-query">
+							</form>
+						</li>
+					</ul>
+      			</div><!--/.nav-collapse -->
+        	</div>
+      	</div>
     </div>
 
-    <div class="container-fluid">
-
-      	<div class="row-fluid">
-      		<div class="span4">
-      			<div class="well sidebar-nav">
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-      				<br />
-
+    <div class="container">
+      	<div class="row">
+      		<div class="span5">
+      			<div id="media" class="well sidebar-nav">
+      				<div id="player"></div>
+					<div id="fullscreen"></div>
+					<div id="trackinfo"></div>
       			</div>
       		</div>
 
-      		<div class="span8">
+      		<div class="span7">
       			<div class="subnav">
-			    	<ul class="nav nav-pills pull-left">
-			    		<div class="btn-group pull-left" data-toggle="buttons-radio">
-							<button class="btn"><i class="icon-backward"></i></button>
-							<button class="btn" rel="tooltip" title="Play"><i class="icon-play"></i></button>
-							<button class="btn"><i class="icon-forward"></i></button>
+			    	<ul class="nav pull-left">
+			    		<div class="btn-group pull-left">
+							<button id="prev" class="btn"><i class="icon-backward"></i></button>
+							<button id="play" class="btn"><i class="icon-play"></i></button>
+							<button id="pause" class="btn active" style="display: none;"><i class="icon-play icon-blue"></i></button>
+							<button id="next" class="btn"><i class="icon-forward"></i></button>
 						</div>
 				    	<div id="nav-time" class="pull-left">
-				    		<div id="time-current">0:00</div>
-					    	<div class="progress">
-					    		 <div class="bar" style="width: 60%;"></div>
+				    		<div id="timeplayed">0:00</div>
+					    	<div id="played" class="progress">
+					    		<div id="buffered" class="progress progress-success progress-striped">
+						    		<div class="bar"></div>
+						    	</div>
+					    		<div class="bar"></div>
+					    		<div id="timehover"></div>
 					    	</div>
-							<div id="time-total">0:00</div>
+							<div id="totaltime">0:00</div>
 						</div>
 			    		<div class="btn-group pull-left" data-toggle="buttons-checkbox">
-							<button class="btn"><i class="icon-random"></i></button>
-							<button class="btn"><i class="icon-repeat"></i></button>
+							<button id="shuffle" class="btn"><i class="icon-random"></i></button>
+							<button id="repeatone" class="btn"><i class="icon-repeat"></i></button>
 						</div>
-			    	</ul>
-			    	<ul id="volume" class="pull-right">
-			    		<div class="btn-group pull-left" data-toggle="buttons-checkbox">
-			    			<button class="btn"><i class="icon-volume-up"></i></button>
-			    		</div>
-						<div class="progress">
-				    		 <div class="bar" style="width: 50%;">test</div>
-				    	</div>
-			    	</ul>
+				    	<div id="volume" class="pull-right">
+				    		<button id="volume-mute" class="btn active pull-left"><i class="icon-volume-off"></i></button>
+				    		<button id="volume-low" class="btn pull-left"><i class="icon-volume-down"></i></button>
+				    		<button id="volume-high" class="btn pull-left"><i class="icon-volume-up"></i></button>
+							<div class="progress pull-left">
+					    		 <div class="bar" style="width: 100%;"></div>
+					    	</div>
+					    </div>
+					</ul>
 			    </div>
-				<div class="well sidebar-nav">
+				<table id="music-list" class="table-striped well" style="width: 100%;">
 
-				</div>
+				</table>
       		</div>
       	</div>
 
@@ -198,17 +128,22 @@
     </div> <!-- /container -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+<script src="js/libs/jquery-ui-1.8.20.custom.min.js"></script>
 
 <script src="js/libs/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 
 <script src="js/plugins.js"></script>
 <script src="js/script.js"></script>
+
+
+<!--
 <script>
 	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
 	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 	s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
-
+-->
 </body>
 </html>

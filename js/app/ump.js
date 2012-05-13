@@ -1,13 +1,3 @@
-/*
-Array.prototype.insert = function(object, index) {
-	this.splice(index, 0, object);
-};
-Array.prototype.remove = function(from, to) {
-	var rest = this.slice((to || from) + 1 || this.length);
-	this.length = from < 0 ? this.length + from : from;
-	return this.push.apply(this, rest);
-};
-*/
 Array.prototype.shuffle = function(){
 	for( var j, x, i = this.length; i; j = parseInt(Math.random() * i), x = this[--i], this[i] = this[j], this[j] = x );
 	return this;
@@ -68,9 +58,7 @@ var ump = {
 			ump.queued[i].index = x++;
 		}
 	},
-	services: {
-		
-	},
+	services: {},
 	handlers: {
 		handle: null,
 		buffer_timer: null,

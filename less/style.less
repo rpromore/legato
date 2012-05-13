@@ -23,7 +23,6 @@ body {
 
 .subnav {
   padding-left: 5px;
-  width: auto;
   line-height: 36px;
   height: 36px;
   background: #ffffff; /* Old browsers */
@@ -92,7 +91,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 @media (min-width: 980px) {
   .subnav-fixed {
     position: fixed;
-    width: 63.82%;
     top: 40px;
     z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
     border-color: #d5d5d5;
@@ -118,11 +116,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   /* Remove any padding from the body */
   body {
     padding-top: 0;
-  }
-
-  /* Jumbotron buttons */
-  .jumbotron .btn {
-    margin-bottom: 10px;
   }
 
   /* Subnav */
@@ -166,24 +159,46 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	width: 10%;
 	padding: 0 5px;
 }
+#nav-time #buffered {
+  background: none;
+  box-shadow: none;
+  position: absolute;
+  z-index: 8;
+}
+#nav-time #buffered > .bar {
+  z-index: 9;
+  border-radius: 4px;
+}
 #nav-time .progress {
 	width: 67%;
 	padding: 0;
 	margin-bottom: 13px;
 	height: 10px;
+  position: relative;
+}
+#nav-time #played > .bar {
+  position: absolute;
+  z-index: 10;
+  border-radius: 4px;
 }
 #nav-time .bar {
 	height: 10px;
 }
+
 #volume {
-	width: 25%;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 #volume .progress {
-	margin-top: 13px;
-	margin-left: 10px;
 	height: 10px;
 	cursor: pointer;
+  margin: 8px 10px;
+  width: 100px;
 }
-#volume .btn-group {
-	margin-right: 5px;
+#volume .btn {
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, .25);
+  border-radius: 4px;
+}
+#volume-low, #volume-mute {
+  display: none;
 }

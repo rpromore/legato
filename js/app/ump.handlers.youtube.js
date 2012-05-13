@@ -1,5 +1,5 @@
 ump.handlers["youtube"] = {
-	play: function(){
+	play: function(callback){
 			if( ump.position != this.index /* || (ump.position == this.index && ump.options.repeat == 1) */ ) {
 				clearInterval(ump.handlers.buffer_timer);
 				clearInterval(ump.handlers.play_timer);
@@ -27,9 +27,8 @@ ump.handlers["youtube"] = {
 					}, 1000);
 					ump.handlers.handle.playVideo();
 					UMP.played(t);
-				};
-				window.onytplayerStateChange = function(newState) {
-				   alert("Player's new state: " + newState);
+					if( callback != null && typeof callback == "function" )
+						callback.call(this);
 				};
 				ump.position = t.index;
 			}
