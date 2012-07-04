@@ -1,54 +1,39 @@
 $("#play").click(function(){
-	u.handle.play();
-});
-$("#pause").click(function(){
-	u.handle.pause();
+	if( $(this).hasClass("active") ) {
+		u.handle.pause();
+	}
+	else {
+		u.handle.play();
+	}
 });
 $("#prev").click(function(){
 	var p = u.handle.prev();
-	console.log(p);
-	$("#seek #buffered").width(0);
-	$("#seek #played").width(0);
 });
 $("#next").click(function(){
 	var n = u.handle.next();
-	$("#seek #buffered").width(0);
-	$("#seek #played").width(0);
 });
-$("#seek").click(function(e){
+$("#nav-time").click(function(e){
 	u.handle.seekTo(e.offsetX/$(this).width()*u.handle.getDuration());
 });
 
 $("#shuffle").click(function(){
 	if( $(this).hasClass("active") ) {
-		$(this).removeClass("active");
 		u.shuffle(false);
+		$(this).find("i").removeClass("icon-blue");
 	}
 	else {
-		$(this).addClass("active");
 		u.shuffle(true);
-	}
-});
-$("#repeat").click(function(){
-	if( $(this).hasClass("active") ) {
-		$(this).removeClass("active");
-		u.repeat(0);
-	}
-	else {
-		$(this).addClass("active");
-		$("#repeatone").removeClass("active");
-		u.repeat(2);
+		$(this).find("i").addClass("icon-blue");
 	}
 });
 $("#repeatone").click(function(){
 	if( $(this).hasClass("active") ) {
-		$(this).removeClass("active");
 		u.repeat(0);
+		$(this).find("i").removeClass("icon-blue");
 	}
 	else {
-		$(this).addClass("active");
-		$("#repeat").removeClass("active");
 		u.repeat(1);
+		$(this).find("i").addClass("icon-blue");
 	}
 });
 
@@ -70,7 +55,7 @@ $("#volume .progress").slider({
 	value: 100,
 	slide: function(e, ui){
 		var v = ui.value;
-		// u.handlers.handle.setVolume(v);
+		u.handlers.handle.setVolume(v);
 		if( v == 0 ) {
 			$("#volume-mute").show();
 			$("#volume-low").hide();
@@ -92,7 +77,7 @@ $("#volume .progress").slider({
 	},
 	change: function(e, ui){
 		var v = ui.value;
-		// u.handlers.handle.setVolume(v);
+		u.handlers.handle.setVolume(v);
 		if( v == 0 ) {
 			$("#volume-mute").show();
 			$("#volume-low").hide();

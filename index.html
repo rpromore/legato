@@ -71,21 +71,18 @@
 
     <div class="container">
       	<div class="row">
-      		<div class="span5">
-      			<div id="media" class="well sidebar-nav">
-      				<div id="player"></div>
-					<div id="fullscreen"></div>
-					<div id="trackinfo"></div>
-      			</div>
-      		</div>
+  			<div id="media" class="well sidebar-nav">
+  				<div id="player"></div>
+				<div id="fullscreen"></div>
+				<div id="trackinfo"></div>
+  			</div>
 
       		<div class="span7">
       			<div class="subnav">
-			    	<ul class="nav pull-left">
+			    	<ul class="nav">
 			    		<div class="btn-group pull-left">
 							<button id="prev" class="btn"><i class="icon-backward"></i></button>
 							<button id="play" class="btn"><i class="icon-play"></i></button>
-							<button id="pause" class="btn active" style="display: none;"><i class="icon-play icon-blue"></i></button>
 							<button id="next" class="btn"><i class="icon-forward"></i></button>
 						</div>
 				    	<div id="nav-time" class="pull-left">
@@ -95,8 +92,8 @@
 						    		<div class="bar"></div>
 						    	</div>
 					    		<div class="bar"></div>
-					    		<div id="timehover"></div>
 					    	</div>
+					    	<div id="timehover"></div>
 							<div id="totaltime">0:00</div>
 						</div>
 			    		<div class="btn-group pull-left" data-toggle="buttons-checkbox">
@@ -113,17 +110,19 @@
 					    </div>
 					</ul>
 			    </div>
-				<table id="music-list" class="table-striped well" style="width: 100%;">
+				<table id="music-list" class="table table-striped table-bordered" style="width: 100%;">
+					<thead>
+						<tr>
+							<th><!--<button class="btn btn-small pull-left"><input type="checkbox" />--></button></th>
+							<th>Title</th>
+						</tr>
+					</thead>
+					<tbody>
 
+					</tbody>
 				</table>
       		</div>
       	</div>
-
-      	<hr>
-
-      	<footer>
-        	<p>&copy; Robert Romore 2012</p>
-      	</footer>
 
     </div> <!-- /container -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -135,6 +134,13 @@
 
 <script src="js/plugins.js"></script>
 <script src="js/script.js"></script>
+
+<script src="js/app/ump.js"></script>
+<script src="js/app/ump.favorites.js"></script>
+<script src="js/app/ump.services.reddit.js"></script>
+<script src="js/app/ump.handlers.youtube.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/ui.js"></script>
 
 
 <!--
