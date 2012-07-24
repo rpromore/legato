@@ -93,7 +93,7 @@ var ump = {
 };
 
 
-UMP = function(data, callback) {
+var UMP = function(data, callback) {
 	var defs = [];
 	$.each(data, function(s, u){
 		if( typeof ump.services[s] == "undefined" )
